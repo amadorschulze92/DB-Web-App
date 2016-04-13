@@ -1,0 +1,22 @@
+## extends "base.jinja2"
+
+
+## block head
+
+## endblock
+
+## block content
+
+<h2> Bing results for "{{q}}" </h2>
+<ol>
+  ## for result in search_results:
+  <li>
+    <div data_url="{{result.Url}}" class="crawl_url">
+      <a href="{{result.Url}}">{{result.Title}}</a> {{result.Url}}
+    </div>
+
+  </li>
+  ## endfor
+</ol>
+
+## endblock

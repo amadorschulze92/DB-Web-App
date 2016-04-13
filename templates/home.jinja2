@@ -1,0 +1,56 @@
+
+## extends "base.jinja2"
+
+
+## block head
+
+## endblock
+
+## block content
+<div align="center">    
+    <h2>SQL Generator</h2>
+</div>
+<div class="connection">
+    <form action="/run" method="POST" target="_blank">
+        <p>Company Requesting Query:<br/>
+    	  <input type="text" name="query" size="30"/>
+    	  </p>
+    	<p>Salesforce Case No:<br/>
+    	  <input type="text" name="case" size="30"/>
+    	  </p>
+    	<p>Notes(optional):<br/>
+    	  <textarea rows="4" cols="30" name="notes"></textarea>
+    	  </p>
+    	<p>Job Title:<br/>
+    	  <textarea rows="4" cols="30" name="title"></textarea>
+    	  </p>
+    	<p>Company:<br/>
+    	  <textarea rows="4" cols="30" name="comp"></textarea>
+    	  </p>
+    	<p>State:<br/>
+    	  <textarea rows="4" cols="30" name="state"></textarea>
+    	  </p>
+    	<p>City:<br/>
+    	  <textarea rows="4" cols="30" name="city"></textarea>
+    	  </p>
+    	<p>Exclude Titles:<br/>
+    	  <textarea rows="4" cols="30" name="extitle"></textarea>
+    	  </p>
+    	<p>Exclude Companies:<br/>
+    	  <textarea rows="4" cols="30" name="excomp"></textarea>
+    	  </p>
+    	<p>Years Experience:<br/>
+    	  Min:<input type="text" name="expmin">
+    	  <br/>
+    	  Max:<input type="text" name="expmax">
+    	  </p>
+    	<p>Type of Form:<br/>
+    	  <input type="checkbox" name="count" value="1">Count
+    	  <br/>
+    	  <input type="checkbox" name="data" value="0">Sample Data
+    	  <br/><br/>
+    	<input type="submit" value="RUN"/>
+    </form>
+</div>
+
+## endblock

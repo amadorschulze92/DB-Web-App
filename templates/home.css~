@@ -1,0 +1,51 @@
+## set margin = '.5em'
+## set bottom_size = "10em"
+## set left_size = "25em"
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: Sans-Serif;
+    font-size: 10pt;
+}
+
+html, body {
+  /* Make the body to be as tall as browser window */
+    height: 100%;
+}
+
+
+.specs_box {
+    width: 100%;
+    padding: 1em;
+}
+
+.specs_table {
+    display: inline-block;
+}
+
+.specs_table .buttons {
+    white-space: nowrap;
+}
+
+table {
+    border-collapse: collapse;
+    width: 600px;
+}
+
+td {
+    border: 1px solid #EEE;
+    padding: 3px;
+    width: 400px;
+    margin: auto;
+    overflow: auto;
+}
+
+tr.good {
+    background: green;
+}
+
+.method_name {
+    background: #AAA;
+}

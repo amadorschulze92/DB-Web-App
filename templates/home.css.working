@@ -1,0 +1,79 @@
+## set margin = '.5em'
+## set bottom_size = "10em"
+## set left_size = "25em"
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: Sans-Serif;
+    font-size: 10pt;
+}
+
+ht1ml, b1ody {
+  /* Make the body to be as tall as browser window */
+    height: 100%;
+}
+
+h2 {
+    font-size: 20pt;
+}
+
+
+.tag_table {
+    width:400px;
+    border-collapse:collapse;
+}
+
+.tag_table td{
+    padding:7px; border:#4e95f4 1px solid;
+}
+
+.tag_table td.b,td.t,td.p{
+    padding:7px; border:#4e95f4 1px solid;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+/* provide some minimal visual accomodation for IE8 and below */
+.tag_table tr{
+    background: #b8d1f3;
+}
+
+/*  Define the background color for all the ODD background rows  */
+.tag_table tr:nth-child(odd){
+    background: #b8d1f3;
+}
+
+/*  Define the background color for all the EVEN background rows  */
+.tag_table tr:nth-child(even){
+    background: #dae5f4;
+}
+
+td {
+    border: 1px solid #EEE;
+    padding: 3px;
+    width: 400px;
+    margin: auto;
+    overflow: auto;
+}
+
+td.tag {
+    border: 1px solid #EEE;
+    padding: 3px;
+    width: 400px;
+    margin: auto;
+    overflow: auto;
+    background-color: #FFCC66;
+    font-weight: bold;
+}
+
+#myou1tercontainer {
+    position:absolute;
+}
+#myinn1ercontainer {
+    position:absolute;
+    top:50%;
+    height:10em;
+    margin-top:-5em
+}

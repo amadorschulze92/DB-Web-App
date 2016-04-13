@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>{% block title %}UPC AutoCrawl Tool{% endblock %}</title>
+
+  <link rel="stylesheet"
+        type="text/css"
+        href="/home.css" />
+
+  <script src="/statics/contrib/jquery-2.1.1.min.js"
+          type="text/javascript"></script>
+  <script src="/statics/upc_demo.js"
+          type="text/javascript"></script>
+
+  ## block head
+
+  ## endblock
+
+</head>
+<body>
+  <form action="/query" method="get">
+    <input type="text" name="title" />
+    <input type="submit" value="tag" />
+  </form>
+
+  {% block content %}
+  {% endblock %}
+</body>
+
+</html>

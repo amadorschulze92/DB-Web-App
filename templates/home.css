@@ -1,0 +1,58 @@
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: Sans-Serif;
+    font-size: 10pt;
+}
+
+#queryS {
+    text-align: left;
+    padding: 5px;
+}
+
+#caseS {
+    text-align: left;
+    padding: 5px;
+}
+
+#notesS {
+    text-align: left;
+    padding: 5px;
+}
+
+#titleS {
+    text-align: left;
+    padding: 5px;
+}
+
+#compS {
+    text-align: left;
+    padding: 5px;
+}
+
+#stateS {
+    text-align: left;
+    padding: 5px;
+}
+
+#cityS {
+    text-align: left;
+    padding: 5px;
+}
+
+#extitleS {
+    text-align: left;
+    padding: 5px;
+}
+
+#excompS {
+    text-align: left;
+    padding: 5px;
+}
+
+#expS {
+    text-align: left;
+    padding: 5px;
+}

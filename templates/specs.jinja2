@@ -1,0 +1,49 @@
+<form method="post" action="/judge">
+  <input type="submit" name="not_product_page" value="Not Product Page" />
+</form>
+
+<div class="specs_box">
+  <table class="specs_table">
+    ## for method, data in ds.iterdata():
+
+    ## if data:
+    <tr>
+      <td colspan="10" class="method_name"> <h3>{{method}}</h3> </td>
+    </tr>
+    ## for k, v in data:
+    <tr>
+      <td class="buttons">
+        <button class="mark_data"
+                data-judgement="good"
+                data-k="{{k}}"
+                data-v="{{v}}"
+                data-method="{{method}}"
+                data-remote-url="{{remote_url}}">Good</button>
+        <button class="mark_data"
+                data-judgement="bad"
+                data-k="{{k}}"
+                data-v="{{v}}"
+                data-method="{{method}}"
+                data-remote-url="{{remote_url}}">Bad</button>
+      </td>
+
+      <td>{{k}}</td>
+      <td>
+{#        ## if v.startswith('data:image'):
+        <img src="{{v}}" />
+        ## else:#}
+        {{v}}
+{#        ## endif #}
+      </td>
+
+    </tr>
+    ## endfor
+    ## endif
+
+    ## else
+    NO RESULTS
+    ## endfor
+
+  </table>
+
+</div>

@@ -1,0 +1,54 @@
+from __future__ import unicode_literals
+
+from werkzeug import Response
+# from werkzeug import Href
+#from requests import Session
+# from requests import get as http_get
+from json import dumps as json_dumps
+
+from render import render
+#from tagger import TitleTagger, explain
+#from config import CONFIG
+
+
+#model_fn = CONFIG.get('extract', 'model_fn')
+#good_training_fn = CONFIG.get('extract', 'demo_good_examples')
+#bad_training_fn = CONFIG.get('extract', 'demo_bad_examples')
+
+#bing_key = CONFIG.get('extract', 'bing_key')
+#bing_href = CONFIG.gethref('extract', 'bing_href')
+
+#diffbot_token = CONFIG.get('extract', 'diffbot_token')
+#diffbot_href = CONFIG.gethref('extract', 'diffbot_href')
+#tt = TitleTagger('model_all')
+
+
+def css(req):
+    return Response(render('home.css'),
+                    mimetype='text/css')
+
+
+def home(req):
+    rows = 500
+    page = req.values.get('page', 0, type=int)
+    q = req.values.get('q', '').strip()
+
+    return Response(render('home.jinja2'),
+                    mimetype='text/html')
+
+
+def tag(req):
+    title = req.values.get('title')
+    tags = title.split()
+    ex = None #explain(title, tags)
+    return Response(render('tag.jinja2',
+                           title=title,
+                           tags=tags,
+                           ex=ex),
+                    mimetype='text/html')
+
+
+def tag_json(req):
+    title = req.values.get('title')
+    tags = tt.tag(title)
+    return Response(json_dumps(tags), mimetype='application/json')
